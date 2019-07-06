@@ -1,4 +1,4 @@
-#The Retail Store Discounts
+# The Retail Store Discounts
 
 This application is for calculate discount for retail store according to different client types, item types, and bill total amount.
 
