@@ -5,6 +5,7 @@ This application is for calculate discount for retail store according to differe
 Tools : 
     - spring boot
     - Junit 5
+    - jacoco
 
 ## Installation
 
@@ -25,7 +26,7 @@ java -jar [jar name]
 To create code cover report [You can find this report in the target/site/jacoco directory]
 
 ```cmd
-mvn test jacoco:reportC
+mvn test jacoco:report
 ```
 ## Usage
 
