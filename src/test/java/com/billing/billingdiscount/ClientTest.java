@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -15,8 +16,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
-@RunWith(SpringRunner.class)
-@WebMvcTest(BillController.class)
 public class ClientTest {
 
     @Test
@@ -28,7 +27,13 @@ public class ClientTest {
     @Test
     public void testNonLoyaltyClient() {
         Client client = DataInitializer.getNonLoyaltyClient();
-        Assert.assertTrue(client.isLoyalClient());
+        Assert.assertFalse(client.isLoyalClient());
+    }
+
+    @Test
+    public void testClientType(){
+        Client client=DataInitializer.getEmployeeClient();
+        Assert.assertFalse(client.isLoyalClient());
     }
 
 }

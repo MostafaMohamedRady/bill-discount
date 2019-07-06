@@ -26,4 +26,5 @@ public class Client {
         return DiscountConfig.calculatePeriod(registrationDate)>=DiscountConfig.LOYALTY_YEARS && clientType==ClientType.CUSTOMER;
     }
 
+
 }

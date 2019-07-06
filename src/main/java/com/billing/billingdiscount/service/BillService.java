@@ -20,7 +20,7 @@ public class BillService {
         double discount = totalBillPrice-totalDiscountedPrice;
         double discountBasedOnTotalAmount=getDiscountBasedOnTotalAmount(totalDiscountedPrice);
         double newPayment=Math.round(totalDiscountedPrice - discountBasedOnTotalAmount);
-        return new BillResponse(bill.getClient(),discount,totalBillPrice,newPayment,discountBasedOnTotalAmount);
+        return new BillResponse(bill.getClient(),totalBillPrice,discount,discountBasedOnTotalAmount,newPayment);
     }
 
 

@@ -8,13 +8,13 @@ public class ItemTest {
     @Test
     public void testGroceryItem() {
         Item item = DataInitializer.getGroceryItem(4);
-        Assert.assertEquals(400, item.getDiscountedPrice(5));
+        Assert.assertEquals(400, item.getDiscountedPrice(5),0);
     }
 
     @Test
     public void testNonGroceryItem() {
         Item item = DataInitializer.getNonGroceryItem(4);
-        Assert.assertEquals(570, item.getDiscountedPrice(5));
+        Assert.assertEquals(570, item.getDiscountedPrice(5),0);
     }
 
 }

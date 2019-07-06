@@ -13,7 +13,7 @@ public class BillResponse {
 
     private Client client;
     private double totalPrice;
-    private double discountPercentage;
+    private double discount;
     private double discountBasedOnTotalAmount;
     private double netPayment;
 
