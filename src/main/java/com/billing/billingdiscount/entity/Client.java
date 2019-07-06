@@ -21,6 +21,10 @@ public class Client {
     private Date registrationDate;
     private ClientType clientType;
 
+    /**
+     * check if this client available for loyal discount (more than two years)
+     * @returnn
+     */
     @JsonIgnore
     public boolean isLoyalClient() {
         return DiscountConfig.calculatePeriod(registrationDate)>=DiscountConfig.LOYALTY_YEARS && clientType==ClientType.CUSTOMER;

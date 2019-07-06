@@ -31,6 +31,11 @@ public class Item {
     }
 
 
+    /**
+     * calculate price of items after discount by percentage
+     * @param discountPercentage
+     * @return discounted price
+     */
     public double getDiscountedPrice(double discountPercentage) {
         if(!isGrocery() && discountPercentage != 0 ) {
             return (getTotalCost() - getTotalCost() * discountPercentage/100);

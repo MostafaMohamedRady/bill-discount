@@ -24,6 +24,11 @@ public class BillService {
     }
 
 
+    /**
+     * get percentage according to client type
+     * @param client
+     * @return percentage
+     */
     private double getDiscountPercentage(Client client) {
         ClientType clientType = client.getClientType();
         if(clientType == ClientType.AFFILIATE || clientType == ClientType.EMPLOYEE || client.isLoyalClient()) {
@@ -32,6 +37,11 @@ public class BillService {
         return 0;
     }
 
+    /**
+     * calculate discount per 100
+     * @param totalDiscountedPrice
+     * @return discount
+     */
     private double getDiscountBasedOnTotalAmount(double totalDiscountedPrice) {
         return Math.floor(totalDiscountedPrice / 100) * DiscountConfig.NORMAL_DISCOUNT;
     }
