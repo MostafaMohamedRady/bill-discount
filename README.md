@@ -22,6 +22,11 @@ To run jar file
 java -jar [jar name]
 ```
 
+To create code cover report [You can find this report in the target/site/jacoco directory]
+
+```cmd
+mvn test jacoco:reportC
+```
 ## Usage
 
 Open url 
