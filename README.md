@@ -59,7 +59,7 @@ try out the service [/bill/calculateDiscount] you can use following body request
 
 response will be like
 ```json
-[15:25, 7/6/2019] مصطفى بكار2: "client": {
+{"client": {
     "id": 1,
     "name": "Ahmed",
     "registrationDate": "2019-07-06T11:16:20.385+0000",
